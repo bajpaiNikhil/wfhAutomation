@@ -38,19 +38,19 @@ def main():
         takeScreenShot()
         # static image do change the file name
         staticImage = Image.open(
-            r"C:\Users\NikhilBajpai\Pictures\Screenshots\iamStupid.png")
+            r"Enter your static image file path")
         dynamicImage = Image.open(
-            fr"C:\Users\NikhilBajpai\Pictures\Screenshots\iamStupid{i}.png".format(i))
+            fr"Enter your dynamic image file path\iamStupid{i}.png".format(i))
         change = rmsDiff(staticImage, dynamicImage)
         if change > 5.0:
             # open browser and play the video
             print("pass reached " + str(change) + str(i))
-            os.remove(fr"C:\Users\NikhilBajpai\Pictures\Screenshots\iamStupid{i}.png".format(i))
+            os.remove(fr"Enter the dynamic image file path\iamStupid{i}.png".format(i))
             pywhatkit.playonyt("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
             # rerun required
             break
         else:
-            os.remove(fr"C:\Users\NikhilBajpai\Pictures\Screenshots\iamStupid{i}.png".format(i))
+            os.remove(fr"Enter the dynamic image file path\iamStupid{i}.png".format(i))
             i += 1
             print("pass reached" + str(change) + str(i))
         time.sleep(4)
